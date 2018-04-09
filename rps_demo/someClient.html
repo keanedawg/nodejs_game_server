@@ -1,0 +1,51 @@
+<html>
+
+    <head>
+        <title>Just Connect Plz</title>
+        <script src="include/util.js"></script>
+        <script src="include/websock.js"></script>
+        <script src="include/webutil.js"></script> 
+        <script src="include/keysym.js"></script> 
+        <script src="include/VT100.js"></script> 
+        <script src="include/wstelnet.js"></script> 
+        <!-- Uncomment to activate firebug lite -->
+        <!--
+        <script type='text/javascript' 
+            src='http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js'></script>
+        -->
+
+
+    </head>
+
+    <body>
+
+        Host: <input id='host' style='width:100'>&nbsp;
+        Port: <input id='port' style='width:50'>&nbsp;
+        Encrypt: <input id='encrypt' type='checkbox'>&nbsp;
+        <input id='connectButton' type='button' value='Connect' style='width:100px'
+            onclick="connect();">&nbsp;
+
+        <br><br>
+
+        <!-- <pre id="terminal"></pre> -->
+
+        <script>
+            console.log("trying to connect");
+            ws = [];
+            var array = new Uint8Array(100);
+            ws = new Websock();
+            ws.open("ws://127.0.0.1:5555");
+            ws.on("open", function() {
+                ws.send_string("I am chuck norris!");
+                console.log("sent something");
+            });
+            ws.on("message", function(data) {
+               console.log("got data!");
+               ws.close();  
+            })
+            
+        </script>
+
+    </body>
+
+</html>
