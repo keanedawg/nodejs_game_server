@@ -30,52 +30,16 @@
         <!-- <pre id="terminal"></pre> -->
 
         <script>
-            // var telnet;
-            // function connect() {
-            //     console.log("connecting");
-            //     telnet.connect($D('host').value,
-            //                    $D('port').value,
-            //                    $D('encrypt').checked);
-            //     $D('connectButton').disabled = true;
-            //     $D('connectButton').value = "Connecting";
-            // }
-            // function disconnect() {
-            //     console.log("disconnecting");
-            //     $D('connectButton').disabled = true;
-            //     $D('connectButton').value = "Disconnecting";
-            //     telnet.disconnect();
-            // }
-            // function connected() {
-            //     console.log("connected");
-            //     $D('connectButton').disabled = false;
-            //     $D('connectButton').value = "Disconnect";
-            //     $D('connectButton').onclick = disconnect;
-            // }
-            // function disconnected() {
-            //     console.log("disconnected");
-            //     $D('connectButton').disabled = false;
-            //     $D('connectButton').value = "Connect";
-            //     $D('connectButton').onclick = connect;
-            // }
-            // window.onload = function() {
-            //     console.log("onload");
-            //     var url = document.location.href;
-            //     $D('host').value = (url.match(/host=([^&#]*)/) || ['',''])[1];
-            //     $D('port').value = (url.match(/port=([^&#]*)/) || ['',''])[1];
-                
-            //     //telnet = Telnet('terminal', connected, disconnected);
-            // }
-
             console.log("trying to connect");
             ws = [];
             var array = new Uint8Array(100);
             ws = new Websock();
             ws.open("ws://127.0.0.1:5555");
-            //ws.send_string("I am chuck norris!");
-            // ws.on("data", function() {
-            //    console.log("got data!");  
-            // })
-            //ws.close();
+            ws.send_string("I am chuck norris!");
+            ws.on("data", function() {
+               console.log("got data!");  
+            })
+            ws.close();
 
         </script>
 
