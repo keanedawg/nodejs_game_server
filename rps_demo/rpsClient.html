@@ -37,16 +37,14 @@
             ws.open("ws://localhost:7777");
             ws.on("open", function() {
                 while (true) {
-                    var res = window.prompt("Enter Input:","defaultText");
+                    var res = window.prompt("Enter Input:","r");
                     ws.send_string(res);
                 }
                 console.log("sent something");
             });
             ws.on("message", function(data) {
-               console.log("got data!");
-               ws.close();  
+               console.log(data);
             })
-            
         </script>
 
     </body>
