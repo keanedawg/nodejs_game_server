@@ -37,8 +37,9 @@
             ws.open("ws://127.0.0.1:5555");
             ws.on("open", function() {
                 ws.send_string("I am chuck norris!");
+                console.log("sent something");
             });
-            ws.on("data", function() {
+            ws.on("message", function(data) {
                console.log("got data!");
                ws.close();  
             })
