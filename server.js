@@ -1,4 +1,5 @@
 var net = require('net');
+var ws = require('websockify');
 
 var HOST = '127.0.0.1';
 var PORT = 6969;
