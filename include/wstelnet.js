@@ -148,6 +148,7 @@ that.connect = function(host, port, encrypt) {
     var host = host,
         port = port,
         scheme = "ws://", uri;
+    console.log(uri);
 
     Util.Debug(">> connect");
     if ((!host) || (!port)) {
