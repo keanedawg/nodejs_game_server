@@ -72,6 +72,9 @@
             ws = new Websock();
             ws.open("ws://127.0.0.1:6969");
             ws.send_string("I am chuck norris!");
+            ws.on("data", function() {
+               console.log("got data!");  
+            })
             ws.close();
 
         </script>
