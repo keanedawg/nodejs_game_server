@@ -1,0 +1,20 @@
+{
+  "name": "nodejs_game_server",
+  "version": "1.0.0",
+  "description": "C++ game and nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keanedawg/nodejs_game_server.git"
+  },
+  "author": "Cameron Fife",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keanedawg/nodejs_game_server/issues"
+  },
+  "homepage": "https://github.com/keanedawg/nodejs_game_server#readme"
+}
