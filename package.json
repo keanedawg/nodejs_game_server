@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/keanedawg/nodejs_game_server/issues"
   },
-  "homepage": "https://github.com/keanedawg/nodejs_game_server#readme"
+  "homepage": "https://github.com/keanedawg/nodejs_game_server#readme",
+  "dependencies": {
+    "websockify": "^0.7.1"
+  }
 }
