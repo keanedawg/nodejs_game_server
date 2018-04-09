@@ -27,7 +27,7 @@
 
         <br><br>
 
-        <pre id="terminal"></pre>
+        <!-- <pre id="terminal"></pre> -->
 
         <script>
             // var telnet;
@@ -57,14 +57,17 @@
             //     $D('connectButton').value = "Connect";
             //     $D('connectButton').onclick = connect;
             // }
-            window.onload = function() {
-                console.log("onload");
-                var url = document.location.href;
-                $D('host').value = (url.match(/host=([^&#]*)/) || ['',''])[1];
-                $D('port').value = (url.match(/port=([^&#]*)/) || ['',''])[1];
+            // window.onload = function() {
+            //     console.log("onload");
+            //     var url = document.location.href;
+            //     $D('host').value = (url.match(/host=([^&#]*)/) || ['',''])[1];
+            //     $D('port').value = (url.match(/port=([^&#]*)/) || ['',''])[1];
                 
-                //telnet = Telnet('terminal', connected, disconnected);
-            }
+            //     //telnet = Telnet('terminal', connected, disconnected);
+            // }
+
+            
+
         </script>
 
     </body>
