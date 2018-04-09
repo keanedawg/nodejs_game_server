@@ -70,7 +70,7 @@
             ws = [];
             var array = new Uint8Array(100);
             ws = new Websock();
-            ws.open("tcp://127.0.0.1:6969");
+            ws.open("ws://127.0.0.1:6969");
             ws.send_string("I am chuck norris!");
             ws.close();
 
