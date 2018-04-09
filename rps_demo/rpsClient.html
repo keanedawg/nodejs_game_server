@@ -34,14 +34,17 @@
             ws = [];
             var array = new Uint8Array(100);
             ws = new Websock();
-            ws.open("ws://127.0.0.1:6666");
+            ws.open("ws://localhost:7777");
             ws.on("open", function() {
-               // ws.send_string("I am chuck norris!");
+                while (true) {
+                    var res = window.prompt("Enter Input:","defaultText");
+                    ws.send_string(res);
+                }
                 console.log("sent something");
             });
             ws.on("message", function(data) {
                console.log("got data!");
-               //ws.close();  
+               ws.close();  
             })
             
         </script>
