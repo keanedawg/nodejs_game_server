@@ -32,6 +32,7 @@
         <script>
             var telnet;
             function connect() {
+                console.log("connecting");
                 telnet.connect($D('host').value,
                                $D('port').value,
                                $D('encrypt').checked);
@@ -39,16 +40,19 @@
                 $D('connectButton').value = "Connecting";
             }
             function disconnect() {
+                console.log("disconnecting");
                 $D('connectButton').disabled = true;
                 $D('connectButton').value = "Disconnecting";
                 telnet.disconnect();
             }
             function connected() {
+                console.log("connected");
                 $D('connectButton').disabled = false;
                 $D('connectButton').value = "Disconnect";
                 $D('connectButton').onclick = disconnect;
             }
             function disconnected() {
+                console.log("disconnected");
                 $D('connectButton').disabled = false;
                 $D('connectButton').value = "Connect";
                 $D('connectButton').onclick = connect;
